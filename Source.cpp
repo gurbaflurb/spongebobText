@@ -1,6 +1,6 @@
 /*
 Aids Text Generator
-Changes regular text being input ie. "Hello There World" and converts it to "hElLo tHeRe wOrLd"
+Changes regular text being input: ie. "Hello There World" and converts it to "hElLo tHeRe wOrLd"
 
 Date: 2/21/2019
 @Author: Sean Chen
@@ -9,7 +9,7 @@ Date: 2/21/2019
 #include <cstdlib>
 #include <stdexcept>
 #include <cctype>
-
+#include <string.h>
 using namespace std;
 
 int main()
@@ -21,7 +21,7 @@ int main()
 
 	try
 	{
-		cin >> charArray;
+		cin.getline(charArray, 500);
 		textLen = strlen(charArray);
 		if (textLen >= 500)
 		{
@@ -34,10 +34,6 @@ int main()
 		exit(0);
 	}
 
-	cin.ignore();
-	cout << "Text before Fuckup" << endl;
-	cout << charArray << endl;
-
 	for (int i = 0; i < textLen; i++)
 	{
 		char temp = charArray[i];
@@ -48,10 +44,10 @@ int main()
 		}
 	}
 
-	cout << "Text after Fuckup" << endl;
+	cout << "\nText after Fuckup" << endl;
 	cout << charArray << endl;
 
-	system("PAUSE");
+	//system("PAUSE");
 
 	return EXIT_SUCCESS;
 }
