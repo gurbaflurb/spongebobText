@@ -33,7 +33,7 @@ int main()
 	catch (const exception& ex)
 	{
 		cerr << ex.what() << "\n Fatal Error" << endl;
-		exit(0);
+		exit(1);
 	}
 
 	for (int i = 0; i < textLen; i++)
