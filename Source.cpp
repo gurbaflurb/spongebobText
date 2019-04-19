@@ -33,7 +33,7 @@ int main()
 	catch (const exception& ex)
 	{
 		cerr << ex.what() << "\n Fatal Error" << endl;
-		exit(1);
+		exit(-1);
 	}
 
 	for (int i = 0; i < textLen; i++)
@@ -48,8 +48,6 @@ int main()
 
 	cout << "\nText after Fuckup" << endl;
 	cout << charArray << endl;
-
-	//system("PAUSE");
 
 	return EXIT_SUCCESS;
 }
